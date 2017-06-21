@@ -1,0 +1,79 @@
+
+<script type="text/javascript">
+
+function ControllaPwd(reg){
+	if(reg.pwd.value!=reg.pwd1.value){
+		alert("ERRORE : Le password inserite sono diverse");
+		reg.pwd.value="";
+		reg.pwd1.value="";
+		return false;
+	}
+	return true;
+}
+</script>
+
+<html>
+	<head></head>
+	<style type="text/css">
+		#reg_utente{
+			background-color: #f08080;
+			width: 550px;
+			height: 450px;
+			float: left;
+			padding-top: 60px;
+			margin-left:30%; 
+			margin-top: 8%;
+		}
+
+	</style>
+	<center>
+		<body>
+			<div id="reg_utente">
+				<font size="7" face="Verdana" color="white"><b>REGISTRATI</b></font>
+				<form name="reg" action="registrazione_ut.php" method="POST" onSubmit="return ControllaPwd(reg)">
+					<table cellpadding="10">
+						<tr>
+							<td>Nome</td>
+							<td><input type="text" name="nome" size="30" required></td>
+						</tr>
+						<tr>
+							<td>Cognome</td>
+							<td><input type="text" name="cognome" size="30" required></td>
+						</tr>
+						<tr>
+							<td>E-mail</td>
+							<td><input type="text" name="email" size="30" required></td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td><input type="password" name="pwd" size="30" required></td>
+						</tr>
+						<tr>	
+							<td>Ripeti password</td>
+							<td><input type="password" name="pwd1" size="30" required></td>
+						</tr>
+						
+						<tr>
+							<td>Telefono</td>
+							<td><input type="text" name="telefono" size="30" required></td>
+						</tr>
+						<tr>
+							<td>Categoria</td>
+							<td>
+								<select name="tipo">
+									<option name="studente">studente</option>
+									<option name="docente">docente</option>
+									<option name="altro">altro</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="submit" value="Conferma"></td>
+							<td><input type="reset" value="Cancella"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</body>
+	</center>
+</html>
