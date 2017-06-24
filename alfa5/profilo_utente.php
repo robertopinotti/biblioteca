@@ -97,12 +97,14 @@ if (pg_fetch_array($query_res)) {
         <h3><strong>Dati utente</strong></h3>
       </div>
       <div class="panel-body">
+
+        <!-- Credenziali e nominativo -->
         
         <?php
 
-        $query_dati_utente = "SELECT * FROM utente";
+        $query_dati_utente = " SELECT * FROM utente WHERE mail='$usr' ";
 
-        if($query_dati_utente = @pg_query("SELECT * FROM utente")){
+        if($query_dati_utente = @pg_query(" SELECT * FROM utente WHERE mail='$usr' ")){
 
           echo '<table class="table table-striped table-hover">';
           echo "\n\t<thead><tr>";
@@ -134,6 +136,47 @@ if (pg_fetch_array($query_res)) {
         }
 
         ?>
+
+        <!-- Anagrafica -->
+        
+        <?php
+
+        $query_anagrafe_utente = " SELECT * FROM anagrafe WHERE mailUtente='$usr' ";
+
+        if($query_anagrafe_utente = @pg_query(" SELECT * FROM anagrafe WHERE mailUtente='$usr' ")){
+
+          echo '<table class="table table-striped table-hover">';
+          echo "\n\t<thead><tr>";
+          echo "\n\t\t<td><b>data nascita</b></td>";
+          echo "\n\t\t<td><b>citta' nascita</b></td>";
+          echo "\n\t\t<td><b>sesso</b></td>";
+          echo "\n\t\t<td><b>citta' residenza</b></td>";
+          echo "\n\t\t<td><b>provincia residenza</b></td>";
+          echo "\n\t\t<td><b>stato residenza</b></td>";
+          echo "\n\t</thead></tr>";
+
+          while($row = pg_fetch_assoc($query_anagrafe_utente)) {
+            echo "\n\t<tbody><tr>";
+            echo "\n\t\t<td>{$row['datanascita']}</td>";
+            echo "\n\t\t<td>{$row['cittànascita']}</td>";
+            echo "\n\t\t<td>{$row['sesso']}</td>";
+            echo "\n\t\t<td>{$row['cittàresidenza']}</td>";
+            echo "\n\t\t<td>{$row['provinciaresidenza']}</td>";
+            echo "\n\t\t<td>{$row['statoresidenza']}</td>";
+            echo "\n\t</tbody></tr>";
+          }
+
+          echo "</table>";
+
+        } else {
+
+          die("Errore nella query: " . pg_last_error($conn));
+
+        }
+
+        ?>
+
+        <a href="modifica_anagrafe.html">Aggiungi/Modifica dati anagrafici</a>
 
       </div>
     </div>
