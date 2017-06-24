@@ -1,0 +1,2 @@
+- sostituisco tutte le lettere accentate con lettere senza accento nel db e nel codice
+- collego al nuovo db "biblioteca"
