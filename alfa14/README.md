@@ -1,0 +1,1 @@
+- possibilità di valutare un libro letto, cioè un prestito passato

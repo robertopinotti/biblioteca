@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="it">
+
+	<head>    
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Ricerca Libro | Biblioteca</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../favicon.ico">
+
+		<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+		<link href="css/bootstrap-united.css" rel="stylesheet">
+		
+  		<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  		<script src="js/vendor/bootstrap.js"></script>
+  		<script src="js/vendor/bootstrap.min.js"></script>
+  		<script src="js/vendor/jquery-1.11.2.js"></script>
+  		<script src="js/vendor/plugin.js"></script>
+  		<script src="js/vendor/npm.js"></script>
+  		<script src="countries.js"></script>
+    
+	<style type="text/css">
+		body {
+			padding-bottom: 50px;
+		}
+		img{
+	      width: 100%;
+	    }    
+	    h1 {
+	      position: absolute;
+	      top: 50px;
+	      left: 50px;
+
+	    }
+	    h1 span { 
+	      color: white;
+	      background: rgba(0, 0, 0, 0.7); 
+	    }
+		.container {
+			padding-top: 10px;
+		}
+		.jumbotron {
+			padding-top: 10px;
+		}
+		fieldset {
+			padding: 20px;
+			background-color: #F6F6F6;
+			border-radius: 10px;
+		}
+	</style>
+	
+</head>
+<body>
+
+<div class="image">
+  <img src="image/biblioteca2.jpg" class="img-responsive" alt="Responsive image">  
+  <h1><span>Ricerca Libro</span></h1>
+</div>
+
+<div class="container">
+
+<ul class="breadcrumb">
+  <li><a href="profiloutente.php">Profilo Utente</a></li>
+  <li class="active">Ricerca Libro</li>
+</ul>
+
+<div class="row">
+
+	<div class="col-md-6">
+
+		<form class="form-horizontal" action="ricercalibro.php" method="POST">
+
+		  <fieldset>
+
+		   <legend>Dati Libro</legend>
+
+		   <p>Premi direttamente "Ricerca Libro" per cercare in tutta la biblioteca.</p><br/>
+
+		    <div class="form-group">
+		      <label for="text" class="col-md-2 control-label">Titolo libro</label>
+		      <div class="col-md-10">
+		        <input type="text" class="form-control" name="Titolo" value="" placeholder="Titolo del libro" />
+		      </div>
+		    </div>
+
+		    <div class="form-group">
+		      <label for="text" class="col-md-2 control-label">Autore libro</label>
+		      <div class="col-md-10">
+		        <input type="text" class="form-control" name="Autore" value="" placeholder="Autore del libro" />
+		      </div>
+		    </div>
+
+			<div class="form-group">
+		      <label for="text" class="col-md-2 control-label">Casa editrice</label>
+		      <div class="col-md-10">
+		        <input type="text" class="form-control" name="CasaEd" value="" placeholder="Casa editrice del libro" />
+		      </div>
+		    </div>    
+
+		   </fieldset> <br/>
+
+		    <div class="form-group">
+		      	<div class="col-md-10 col-md-offset-2">
+		        	<button type="reset" class="btn btn-default">Pulisci form</button>
+		        	<button type="submit" class="btn btn-primary">Ricerca libro</button>
+		    	</div>
+		    </div>
+
+		</form>
+
+	</div> <!-- <div class="col-md-6"> -->
+
+</div> <!-- <div class="row"> -->
+</div> <!-- <div class="container"> -->
+
+</body>
+</html>
