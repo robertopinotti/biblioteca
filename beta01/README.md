@@ -1,2 +1,0 @@
-- check di tutto il sito: fix di alcuni bug
-- in modificaanagrafe.php aggiunto INSERT INTO insieme ad UPDATE

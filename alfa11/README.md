@@ -1,1 +1,0 @@
-- convalida prestito e termina prestito
