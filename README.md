@@ -1,7 +1,5 @@
 University Project: website to manage a public library
 
-Link: https://drive.google.com/open?id=0B2EFFw-dDHjjSGxHNEVmNEJ5b00
-
 Internel version: alfa24
 
 Bug: everything works
@@ -102,4 +100,4 @@ INSERT INTO Permesso values ('docente', 10, 90);
 INSERT INTO Permesso values ('studente', 5, 60);
 INSERT INTO Permesso values ('altro', 3, 14);
 
-INSERT INTO dipendente (mail, password, nome, cognome, numerotelefono) VALUES ('fnoto@unimi.it', 'fnoto', 'francesco', 'noto', '3334455666');
+INSERT INTO dipendente (mail, password, nome, cognome, numerotelefono) VALUES ('test@unimi.it', 'test', 'test', 'test', '0000000000');
